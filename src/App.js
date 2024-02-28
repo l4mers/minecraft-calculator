@@ -1,22 +1,28 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import RaiseOrLowerLandMass from './states/RaiseOrLowerLandMass.jsx';
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('main');
+
+  const goToRaiseOrLowerLandMass = () => {
+    setCurrentPage('RaiseOrLowerLandMass');
+  };
+
+  const goToMainPage = () => {
+    setCurrentPage('main');
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {currentPage === 'main' && (
+          <button onClick={goToRaiseOrLowerLandMass} className="my-button">
+            Raise or lower landmass
+          </button>
+        )}
+        
+        {currentPage === 'RaiseOrLowerLandMass' && <RaiseOrLowerLandMass goToMainPage={goToMainPage} />}
       </header>
     </div>
   );
