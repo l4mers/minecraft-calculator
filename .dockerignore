@@ -1,0 +1,48 @@
+# Node modules
+node_modules
+
+# Git and version control
+.git
+.gitignore
+
+# Dependency directories
+node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Operating system generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE/editor directories
+.idea
+.vscode
+*.swp
+*.swo
+*.sublime-workspace
+
+# Build output directories
+build
+dist
+
+# Optional: if you're compiling on your host and copying only the output to the Docker image
+public
+
+# Dependency lock files (consider including these if you're not installing dependencies in your Dockerfile)
+# package-lock.json
+# yarn.lock
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
